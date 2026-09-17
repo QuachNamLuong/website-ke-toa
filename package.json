@@ -1,0 +1,16 @@
+{
+  "name": "website-ke-toa",
+  "module": "assets/ts/app.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "tailwindcss": "^4.3.3"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "alpinejs": "^3.17.2",
+    "htmx.org": "^2.0.10"
+  }
+}
