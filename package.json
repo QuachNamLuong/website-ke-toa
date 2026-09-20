@@ -3,6 +3,7 @@
   "module": "assets/ts/app.ts",
   "type": "module",
   "devDependencies": {
+    "@types/alpinejs": "^3.13.11",
     "@types/bun": "latest",
     "tailwindcss": "^4.3.3"
   },

@@ -7,15 +7,15 @@ import (
 	viewApp "github.com/quachnamluong/website-ke-toa/view/app"
 )
 
-type HomeHandler struct {
+type AppHandler struct {
 	app *app.App
 }
 
-func NewHomeHandler(a *app.App) *HomeHandler {
+func NewAppHandler(a *app.App) *HomeHandler {
 	return &HomeHandler{app: a}
 }
 
-func (h *HomeHandler) Show(w http.ResponseWriter, r *http.Request) {
+func (h *AppHandler) Show(w http.ResponseWriter, r *http.Request) {
 	if err := viewApp.Index().Render(r.Context(), w); err != nil {
 		h.app.Logger.Error("render home failed", "err", err) // <- panics if h.app or h.app.Logger is nil
 		http.Error(w, "internal error", http.StatusInternalServerError)

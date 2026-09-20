@@ -10,7 +10,8 @@ import (
 
 func New(a *app.App) http.Handler {
 	r := chi.NewRouter()
+	
 	r.Get("/", handler.NewHomeHandler(a).Show)
-
+	r.Get("/app", handler.NewAppHandler(a).Show)
 	return r
 }

@@ -20,6 +20,7 @@
             delve
             golangci-lint
             templ.packages.${system}.templ
+            bun
           ];
 
           shellHook = ''
