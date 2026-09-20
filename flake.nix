@@ -4,9 +4,10 @@
     inputs = {
       nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
       flake-utils.url = "github:numtide/flake-utils";
+      templ.url = "github:a-h/templ";
     };
 
-    outputs = { self, nixpkgs, flake-utils }:
+    outputs = { self, nixpkgs, flake-utils, templ }:
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
@@ -16,6 +17,9 @@
             go
             gotools
             gopls
+            delve
+            golangci-lint
+            templ.packages.${system}.templ
           ];
 
           shellHook = ''
